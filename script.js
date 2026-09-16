@@ -31,7 +31,7 @@ const projects = [
 ];
 
 const services = [
-  ['✦', 'AI Agent Development', 'Practical agents designed around a real business workflow.'], ['↗', 'GTM Engineering', 'Research and outreach systems that make good context easier to act on.'], ['◎', 'AI Automation', 'Connect repetitive tasks into workflows that save attention.'], ['⌁', 'Web Development', 'Clear, responsive digital experiences for useful products and brands.'], ['◌', 'Digital Growth Systems', 'Simple systems for finding, serving and learning from customers.'], ['◈', 'E-commerce Solutions', 'Thoughtful storefront and brand experiences built for online selling.']
+  ['spark', 'AI Agent Development', 'Practical agents designed around a real business workflow.'], ['arrow-up-right', 'GTM Engineering', 'Research and outreach systems that make good context easier to act on.'], ['automation', 'AI Automation', 'Connect repetitive tasks into workflows that save attention.'], ['web', 'Web Development', 'Clear, responsive digital experiences for useful products and brands.'], ['growth', 'Digital Growth Systems', 'Simple systems for finding, serving and learning from customers.'], ['store', 'E-commerce Solutions', 'Thoughtful storefront and brand experiences built for online selling.']
 ];
 
 const skillGroups = {
@@ -54,21 +54,33 @@ const insightList = document.querySelector('#insight-list');
 const dialog = document.querySelector('#project-dialog');
 const dialogContent = document.querySelector('#dialog-content');
 
-projectGrid.innerHTML = projects.map((project, index) => `<article class="project-card ${project.featured ? 'featured' : ''} section-reveal" data-project="${project.id}" tabindex="0" role="button" aria-label="View details for ${project.title}"><div class="project-image"><img src="${project.image}" alt="Abstract visual for ${project.title}" loading="lazy" /><span class="project-number">${project.number}</span><span class="project-status">${project.status}</span></div><div class="project-card-body"><div><span class="project-category">${project.category}</span><h3>${project.title}</h3><p>${project.description}</p><div class="tag-list">${project.tags.map(tag => `<span>${tag}</span>`).join('')}</div></div><span class="card-arrow">↗</span></div></article>`).join('');
+const icons = {
+  'arrow-up-right': '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11" /></svg>',
+  sun: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg>',
+  moon: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z" /></svg>',
+  spark: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3Z" /></svg>',
+  automation: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3" /><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8" /></svg>',
+  web: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18M8 6.5h.01M11 6.5h.01" /></svg>',
+  growth: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 17 10 11l4 4 6-7" /><path d="M15 8h5v5" /></svg>',
+  store: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 10v10h16V10M3 10l2-6h14l2 6M3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0" /></svg>'
+};
+const icon = name => icons[name] || icons['arrow-up-right'];
 
-servicesGrid.innerHTML = services.map(([icon, title, description]) => `<button class="service-card" type="button" data-service="${title}"><span class="service-icon">${icon}</span><span><strong>${title}</strong><small>${description}</small></span><span class="service-arrow">↗</span></button>`).join('');
+projectGrid.innerHTML = projects.map((project, index) => `<article class="project-card ${project.featured ? 'featured' : ''} section-reveal" data-project="${project.id}" tabindex="0" role="button" aria-label="View details for ${project.title}"><div class="project-image"><img src="${project.image}" alt="Abstract visual for ${project.title}" loading="lazy" /><span class="project-number">${project.number}</span><span class="project-status">${project.status}</span></div><div class="project-card-body"><div><span class="project-category">${project.category}</span><h3>${project.title}</h3><p>${project.description}</p><div class="tag-list">${project.tags.map(tag => `<span>${tag}</span>`).join('')}</div></div><span class="card-arrow inline-icon" aria-hidden="true">${icon('arrow-up-right')}</span></div></article>`).join('');
+
+servicesGrid.innerHTML = services.map(([iconName, title, description]) => `<button class="service-card" type="button" data-service="${title}"><span class="service-icon" aria-hidden="true">${icon(iconName)}</span><span><strong>${title}</strong><small>${description}</small></span><span class="service-arrow inline-icon" aria-hidden="true">${icon('arrow-up-right')}</span></button>`).join('');
 skillGroupsElement.innerHTML = Object.entries(skillGroups).map(([group, skills]) => `<div class="skill-group"><h3>${group}</h3><div>${skills.map(skill => `<span>${skill}</span>`).join('')}</div></div>`).join('');
-insightList.innerHTML = insights.map((insight, index) => `<article class="insight-row" tabindex="0" role="button" aria-label="Read ${insight.title}"><span class="insight-index">0${index + 1}</span><div><span class="project-category">${insight.category}</span><h3>${insight.title}</h3><p>${insight.text}</p></div><span class="insight-date">${insight.date}</span><button type="button" class="round-arrow" tabindex="-1" aria-hidden="true">↗</button></article>`).join('');
+insightList.innerHTML = insights.map((insight, index) => `<article class="insight-row" tabindex="0" role="button" aria-label="Read ${insight.title}"><span class="insight-index">0${index + 1}</span><div><span class="project-category">${insight.category}</span><h3>${insight.title}</h3><p>${insight.text}</p></div><span class="insight-date">${insight.date}</span><button type="button" class="round-arrow" tabindex="-1" aria-hidden="true">${icon('arrow-up-right')}</button></article>`).join('');
 document.querySelectorAll('.insight-row').forEach((row, index) => {
   const openInsight = () => {
   const insight = insights[index];
-  dialogContent.innerHTML = `<div class="dialog-hero"><span class="project-category">${insight.category}</span><h2>${insight.title}</h2><p>${insight.text}</p></div><div class="dialog-grid"><div><span class="dialog-label">Status</span><p>This note is planned for a future writing update.</p></div><div><span class="dialog-label">Topic</span><p>${insight.category} · Practical systems · Business context</p></div></div><div class="dialog-actions"><a class="button button-primary" href="mailto:${brandConfig.email}?subject=${encodeURIComponent(`Discuss: ${insight.title}`)}">Discuss this topic <span>↗</span></a></div>`;
+  dialogContent.innerHTML = `<div class="dialog-hero"><span class="project-category">${insight.category}</span><h2>${insight.title}</h2><p>${insight.text}</p></div><div class="dialog-grid"><div><span class="dialog-label">Status</span><p>This note is planned for a future writing update.</p></div><div><span class="dialog-label">Topic</span><p>${insight.category} · Practical systems · Business context</p></div></div><div class="dialog-actions"><a class="button button-primary" href="mailto:${brandConfig.email}?subject=${encodeURIComponent(`Discuss: ${insight.title}`)}">Discuss this topic <span class="inline-icon" aria-hidden="true">${icon('arrow-up-right')}</span></a></div>`;
   dialog.showModal();
   };
   row.addEventListener('click', openInsight);
   row.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openInsight(); } });
 });
-document.querySelector('#contact-options').innerHTML = contactOptions.map(([title, description, subject, body]) => `<a class="contact-option" href="mailto:${brandConfig.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`${body}\n\nName:\nCompany or project:\nPreferred next step:`)}"><span><strong>${title}</strong><small>${description}</small></span><span>↗</span></a>`).join('');
+document.querySelector('#contact-options').innerHTML = contactOptions.map(([title, description, subject, body]) => `<a class="contact-option" href="mailto:${brandConfig.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`${body}\n\nName:\nCompany or project:\nPreferred next step:`)}"><span><strong>${title}</strong><small>${description}</small></span><span class="inline-icon" aria-hidden="true">${icon('arrow-up-right')}</span></a>`).join('');
 document.querySelectorAll('[data-email-link]').forEach(link => { link.href = `mailto:${brandConfig.email}`; link.textContent = brandConfig.email; });
 document.querySelectorAll('[data-x-link]').forEach(link => { link.href = brandConfig.links.x; });
 document.querySelectorAll('[data-facebook-link]').forEach(link => { link.href = brandConfig.links.facebook; });
@@ -81,14 +93,14 @@ document.querySelector('[data-profile-image]').src = brandConfig.profileImage;
 document.querySelector('[data-location]').textContent = brandConfig.location;
 
 function openProject(project) {
-  dialogContent.innerHTML = `<div class="dialog-hero"><span class="project-category">${project.category}</span><h2>${project.title}</h2><p>${project.description}</p></div><div class="dialog-grid"><div><span class="dialog-label">Overview</span><p>${project.title} is a ${project.status.toLowerCase()} exploring how technology can create a clearer, more useful business workflow.</p></div><div><span class="dialog-label">What it could do</span><p>Research context, surface opportunities, reduce repetitive work and give people a stronger starting point for the next decision.</p></div><div><span class="dialog-label">Technology direction</span><p>${project.tags.join(' · ')}</p></div><div><span class="dialog-label">Current status</span><p>${project.status}</p></div></div><div class="dialog-actions"><a class="button button-primary" href="#contact" onclick="dialog.close()">Talk about this <span>↗</span></a></div>`;
+  dialogContent.innerHTML = `<div class="dialog-hero"><span class="project-category">${project.category}</span><h2>${project.title}</h2><p>${project.description}</p></div><div class="dialog-grid"><div><span class="dialog-label">Overview</span><p>${project.title} is a ${project.status.toLowerCase()} exploring how technology can create a clearer, more useful business workflow.</p></div><div><span class="dialog-label">What it could do</span><p>Research context, surface opportunities, reduce repetitive work and give people a stronger starting point for the next decision.</p></div><div><span class="dialog-label">Technology direction</span><p>${project.tags.join(' · ')}</p></div><div><span class="dialog-label">Current status</span><p>${project.status}</p></div></div><div class="dialog-actions"><a class="button button-primary" href="#contact" onclick="dialog.close()">Talk about this <span class="inline-icon" aria-hidden="true">${icon('arrow-up-right')}</span></a></div>`;
   dialog.showModal();
 }
 
 document.querySelectorAll('.project-card').forEach(card => { card.addEventListener('click', () => openProject(projects.find(project => project.id === card.dataset.project))); card.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); card.click(); } }); });
 document.querySelector('#dialog-close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
-document.querySelectorAll('.service-card').forEach(card => card.addEventListener('click', () => { const service = services.find(item => item[1] === card.dataset.service); dialogContent.innerHTML = `<div class="dialog-hero"><span class="project-category">Service direction</span><h2>${service[1]}</h2><p>${service[2]}</p></div><div class="dialog-grid"><div><span class="dialog-label">How I approach it</span><p>Start with the business goal, map the moments that slow people down, then build a focused system that can be tested and improved.</p></div><div><span class="dialog-label">Next step</span><p>Bring a real workflow or rough idea. We can shape the smallest useful version together.</p></div></div><div class="dialog-actions"><a class="button button-primary" href="#contact" onclick="dialog.close()">Start a conversation <span>↗</span></a></div>`; dialog.showModal(); }));
+document.querySelectorAll('.service-card').forEach(card => card.addEventListener('click', () => { const service = services.find(item => item[1] === card.dataset.service); dialogContent.innerHTML = `<div class="dialog-hero"><span class="project-category">Service direction</span><h2>${service[1]}</h2><p>${service[2]}</p></div><div class="dialog-grid"><div><span class="dialog-label">How I approach it</span><p>Start with the business goal, map the moments that slow people down, then build a focused system that can be tested and improved.</p></div><div><span class="dialog-label">Next step</span><p>Bring a real workflow or rough idea. We can shape the smallest useful version together.</p></div></div><div class="dialog-actions"><a class="button button-primary" href="#contact" onclick="dialog.close()">Start a conversation <span class="inline-icon" aria-hidden="true">${icon('arrow-up-right')}</span></a></div>`; dialog.showModal(); }));
 
 const contactForm = document.querySelector('#contact-form');
 const contactSubmit = contactForm.querySelector('button[type="submit"]');
@@ -125,14 +137,14 @@ contactForm.addEventListener('submit', async event => {
   } finally {
     contactSubmitting = false;
     contactSubmit.disabled = false;
-    contactSubmit.innerHTML = 'Send message <span>↗</span>';
+    contactSubmit.innerHTML = `Send message <span class="inline-icon" aria-hidden="true">${icon('arrow-up-right')}</span>`;
   }
 });
 
 const themeToggle = document.querySelector('#theme-toggle');
 const savedTheme = localStorage.getItem('ayomide-theme');
 if (savedTheme === 'light') document.body.classList.add('light'); else document.body.classList.add('dark');
-function updateThemeButton() { const dark = !document.body.classList.contains('light'); themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode'); themeToggle.querySelector('.theme-icon').textContent = dark ? '☼' : '◐'; }
+function updateThemeButton() { const dark = !document.body.classList.contains('light'); themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode'); themeToggle.querySelector('.theme-icon').innerHTML = icon(dark ? 'sun' : 'moon'); }
 updateThemeButton();
 themeToggle.addEventListener('click', () => { const light = document.body.classList.toggle('light'); document.body.classList.toggle('dark', !light); localStorage.setItem('ayomide-theme', light ? 'light' : 'dark'); updateThemeButton(); });
 
