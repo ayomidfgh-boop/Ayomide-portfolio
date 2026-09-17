@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 const themeToggle = document.querySelector('#theme-toggle');
 const menuToggle = document.querySelector('#menu-toggle');
 const mobileMenu = document.querySelector('#mobile-menu');
@@ -37,13 +39,13 @@ themeToggle.addEventListener('click', () => {
 });
 
 const agentStepCopy = [
-  ['The agent starts with a clear, bounded input', 'A public website URL, a task, or a business question. Ambiguous, private, or unsupported inputs are rejected early instead of being guessed at.'],
-  ['The agent is the orchestrator, not the guesser', 'It chooses the next step, applies defined rules, and decides when a human should be involved. It never runs outside its declared boundary.'],
-  ['Research gathers and validates the right signals', 'It reads public pages, checks the sources it relies on, and collects evidence rather than inventing context.'],
-  ['Analysis separates facts from interpretation', 'Every outcome is labeled FACT, HYPOTHESIS, or OPPORTUNITY so a reviewer always knows the basis for a claim.'],
-  ['Decisions follow explicit, reviewable rules', 'Is this qualified? Which bucket does it belong to? Should it be routed? The agent applies rules instead of relying on chance or memory.'],
-  ['Actions run through tools and APIs', 'Where the rules allow, the agent executes the next step — generate a brief, update a record, or trigger a notification — and logs it.'],
-  ['The run ends with a human handoff / result', 'The output is a reviewable result with sources, confidence labels, and a clear next action. Judgment that carries business weight always goes to a human.']
+  ['User request', 'A qualified lead, public site URL, or a clear business question comes in. Ambiguous, private, or unsupported inputs are rejected early instead of being guessed at.'],
+  ['Agent', 'The agent is the orchestrator, not the guesser. It decides the next step, applies defined rules, and never runs outside its declared boundary.'],
+  ['Tools', 'Bounded tools handle the mechanics: HTTP fetching, classification, and structured JSON — each with explicit capabilities and guardrails.'],
+  ['Research', 'Research validates the right signals from public pages and source checks, collecting evidence instead of inventing context.'],
+  ['Reasoning', 'Reasoning separates facts from interpretation. Every outcome is labeled FACT, HYPOTHESIS, or OPPORTUNITY so a reviewer always knows the basis for a claim.'],
+  ['Action', 'Where the rules allow, the agent executes the defined next step — generate a brief, update a record, or trigger a notification — and logs the action.'],
+  ['Handoff / Result', 'The run ends with a reviewable result: sources, confidence labels, and a clear next action. Judgment that carries business weight always goes to a human.']
 ];
 const agentSteps = [...document.querySelectorAll('.af-step')];
 const agentPanelTitle = document.querySelector('#agent-panel-title');
@@ -53,7 +55,10 @@ function setAgentStep(index) {
   agentPanelTitle.textContent = agentStepCopy[index][0];
   agentPanelText.textContent = agentStepCopy[index][1];
 }
-if (agentSteps.length) agentSteps.forEach(step => step.addEventListener('click', () => setAgentStep(Number(step.dataset.step))));
+if (agentSteps.length) {
+  setAgentStep(0);
+  agentSteps.forEach(step => step.addEventListener('click', () => setAgentStep(Number(step.dataset.step))));
+}
 
 const sectionLinks = [...document.querySelectorAll('.nav-link')];
 const sectionObserver = new IntersectionObserver(entries => entries.forEach(entry => {

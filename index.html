@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#11100f" />
+  <meta name="theme-color" content="#0a0a0a" />
   <meta name="description" content="Ayo is an AI Engineer & Full-Stack Developer building AI agents, automation workflows, intelligent web applications, and full-stack systems for real business problems." />
   <meta property="og:title" content="Ayo | AI Engineer & Full-Stack Developer" />
   <meta property="og:description" content="AI agents, AI automation, research workflows, and full-stack systems for practical business outcomes." />
@@ -14,21 +14,21 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=14" />
   <title>Ayo | AI Engineer & Full-Stack Developer</title>
 </head>
 <body>
   <div class="site-shell">
     <header class="topbar" id="home">
-      <a class="wordmark" href="#home" aria-label="Ayo home"><span class="wordmark-mark">A</span><span>Ayo</span></a>
+      <a class="wordmark" href="#home" aria-label="Ayo home"><span class="wordmark-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4 18 20M12 4 6 20M9 14h6"/></svg></span><span>Ayo</span></a>
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#services">Services</a><a class="nav-link" href="#agents">AI Agents</a><a class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#skills">Technology</a><a class="nav-link" href="#process">Process</a><a class="nav-link" href="#contact">Contact</a>
       </nav>
       <div class="topbar-actions">
         <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"><span class="theme-icon" aria-hidden="true"></span></button>
-        <a class="topbar-cta" href="/agent/" aria-label="Open Research Studio">Research Studio <span aria-hidden="true">↗</span></a>
+        <a class="button button-primary topbar-cta" href="/agent/">Research Studio <span aria-hidden="true">↗</span></a>
         <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation"><span></span><span></span></button>
       </div>
     </header>
@@ -40,23 +40,35 @@
     <main>
       <section class="hero section-reveal" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> AI ENGINEER • AGENTIC AI • FULL-STACK DEVELOPER</p>
+          <p class="eyebrow">AI ENGINEERING · AGENTIC AI · AI AUTOMATION · FULL-STACK DEVELOPMENT</p>
           <h1 id="hero-title">AI-Powered Systems That Automate <em>Real Business Work</em></h1>
-          <p class="hero-intro">I build AI agents, automation workflows, intelligent web applications, and full-stack systems that help businesses reduce repetitive work, research faster, and operate with dependable software.</p>
+          <p class="hero-intro">I build AI agents, automation workflows, intelligent web applications, and full-stack systems that help businesses reduce repetitive work and operate more efficiently.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects">View My Work <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#projects">View selected work <span aria-hidden="true">↗</span></a>
             <a class="button button-quiet" href="/agent/">Try the Research Studio <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="hero-proof"><span>Based in Lagos, Nigeria</span><span class="proof-line"></span><span>AI agents · Automation · Full-stack systems</span></div>
+          <div class="hero-proof"><span>Lagos, Nigeria</span><span class="proof-line"></span><span>Open to thoughtful conversations</span></div>
         </div>
-        <div class="hero-visual" aria-label="A visual map of a research workflow">
-          <div class="visual-grid"></div>
-          <div class="workflow-orbit orbit-a"></div>
-          <div class="workflow-orbit orbit-b"></div>
-          <div class="workflow-card card-research"><span class="card-index">01</span><strong>Research</strong><small>Gather the right signal</small></div>
-          <div class="workflow-card card-qualify"><span class="card-index">02</span><strong>Qualify</strong><small>Make context useful</small></div>
-          <div class="workflow-card card-act"><span class="card-index">03</span><strong>Act</strong><small>Support the next step</small></div>
-          <div class="visual-center"><span class="center-mark">A</span><span>Business<br />systems</span></div>
+
+        <div class="hero-visual section-reveal" aria-label="Preview of the Prospect Intelligence Agent research interface">
+          <div class="console-card">
+            <div class="console-bar"><span class="c-dot"></span><span class="c-dot"></span><span class="c-dot"></span><em>research-agent · prospect intelligence</em><span class="c-live">live</span></div>
+            <div class="console-body">
+              <div class="console-field"><span class="field-tag">INPUT</span><div class="field-row"><span class="url-pill">https://your-company.com</span><span class="run-pill">Run research</span></div></div>
+              <ol class="console-pipeline">
+                <li><span class="c-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span><div><strong>Validate URL</strong><small>public · https only</small></div></li>
+                <li><span class="c-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span><div><strong>Extract pages</strong><small>homepage + related same-domain pages</small></div></li>
+                <li><span class="c-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span><div><strong>Analyze signals</strong><small>positioning · audience · offering</small></div></li>
+                <li><span class="c-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span><div><strong>Structured report</strong><small>facts separated from hypotheses</small></div></li>
+              </ol>
+              <div class="console-result">
+                <div class="cr-row"><span class="cr-key">Company</span><strong>ABZ Software</strong></div>
+                <div class="cr-chips"><span>Industry · Software</span><span>Model · SaaS</span><span>ICP · B2B teams</span></div>
+                <div class="cr-tags"><span class="tag tag-fact">FACT</span><span class="tag tag-hyp">HYPOTHESIS</span><span class="tag tag-opp">OPPORTUNITY</span></div>
+              </div>
+              <a class="console-cta" href="/agent/">Open the live Research Studio <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -65,26 +77,25 @@
       <section class="social-strip section-reveal" aria-label="Professional profiles"><span class="social-label">Find me around the web</span><div class="social-links"><a href="https://github.com/ayomidfgh-boop/Ayomide-portfolio" target="_blank" rel="noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-2.69 16.56c.43.08.59-.19.59-.42v-1.64c-2.39.52-2.9-1.02-2.9-1.02-.39-.99-.96-1.25-.96-1.25-.78-.53.06-.52.06-.52.86.06 1.31.88 1.31.88.76 1.3 1.99.92 2.48.7.08-.55.3-.92.54-1.13-1.91-.22-3.92-.96-3.92-4.26 0-.94.34-1.71.9-2.31-.09-.22-.39-1.09.09-2.28 0 0 .73-.23 2.34.88a8.1 8.1 0 0 1 4.26 0c1.61-1.11 2.34-.88 2.34-.88.48 1.19.18 2.06.09 2.28.56.6.9 1.37.9 2.31 0 3.31-2.01 4.03-3.93 4.25.31.27.58.8.58 1.61v2.39c0 .23.16.5.59.42A8.5 8.5 0 0 0 12 3.5Z"/></svg></a><a href="https://x.com/ibrahim_ay62338" target="_blank" rel="noreferrer" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4 19 20M19 4 5 20"/></svg></a><a href="https://www.facebook.com/share/1JPLAz8tw/?mibextid=wwXIfr" target="_blank" rel="noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h3V1h-3c-2.76 0-5 2.24-5 5v3H6v3h3v8h3v-8h3l1-3h-4V6c0-1.1.9-2 2-2Z"/></svg></a></div><span class="social-note">Open to thoughtful conversations.</span></section>
 
       <section class="about-section section-reveal" id="about">
-        <div class="section-index">01 <span></span> About</div>
+        <div class="section-index">01 <span></span> Practitioner</div>
         <div class="about-layout">
           <div>
-            <p class="section-kicker">A focused practice</p>
+            <p class="section-kicker">About</p>
             <h2>Technology should move a business <em>forward.</em></h2>
           </div>
           <div class="about-copy">
-            <p>I am an AI engineer and full-stack developer based in Lagos. My practice sits at the intersection of three things: AI agents, business automation, and dependable web systems. I design systems around a clear business problem, not around technology for its own sake.</p>
-            <p>I build AI-assisted workflows that reduce repetitive manual work, research agents that turn a company website into a structured brief, and full-stack applications that connect a responsive interface to real server-side logic.</p>
-            <p>What I specialize in — agentic AI and AI agents, AI automation, full-stack web development, business automation, API and backend development, and intelligent business systems. The problems I solve are practical: slow lead research, scattered business information, manual data processing, and inefficient workflows.</p>
-            <p>Why businesses use these systems — every build is tied to a measurable operating outcome, each claim is backed by working, verifiable code, and AI output is always separated from verified facts and kept under human review.</p>
+            <p>I am an AI engineer and full-stack developer based in Lagos. My practice sits at the intersection of three things: AI agents, business automation, and dependable web systems — designed around a clear business problem, not technology for its own sake.</p>
+            <p>I build research agents that turn a company website into a structured brief, automation workflows that replace repetitive manual steps, and full-stack applications that connect a responsive interface to real server-side logic, validation, and deployment.</p>
+            <p>The problems I solve are practical: slow lead research, scattered business information, manual data processing, and workflows that depend on memory and one person. Every build stays tied to a measurable operating outcome, and AI output is always separated from verified facts and kept under human review.</p>
             <a class="text-link" href="#contact">Tell me what needs building <span aria-hidden="true">↗</span></a>
           </div>
         </div>
         <div class="about-plate section-reveal">
-          <div class="about-photo"><img src="assets/profile.jpg" alt="Portrait of Abdul Fatai Ibrahim Ayomide" /><span class="photo-label">Abdul Fatai Ibrahim Ayomide</span></div>
+          <div class="about-photo"><img src="assets/profile.jpg" alt="Portrait of Abdul Fatai Ibrahim Ayomide" loading="lazy" /><span class="photo-label">Abdul Fatai Ibrahim Ayomide</span></div>
           <div class="focus-list">
-            <div class="focus-item"><span class="focus-index">A</span><div><strong>Agentic AI & AI Agents</strong><p>Research agents, qualification agents, and multi-step agents with human handoff points.</p></div></div>
-            <div class="focus-item"><span class="focus-index">B</span><div><strong>AI & Business Automation</strong><p>Workflows that connect forms, data, APIs, and notifications into dependable operations.</p></div></div>
-            <div class="focus-item"><span class="focus-index">C</span><div><strong>Full-Stack Web Systems</strong><p>Responsive frontends with real backend logic, validation, APIs, and deployment paths.</p></div></div>
+            <div class="focus-item"><span class="focus-index" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4 18 20M12 4 6 20M9 14h6"/></svg></span><div><strong>Agentic AI & AI Agents</strong><p>Research, qualification, and multi-step agents with defined rules and human handoff points.</p></div></div>
+            <div class="focus-item"><span class="focus-index" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></svg></span><div><strong>AI & Business Automation</strong><p>Workflows that connect forms, data, APIs, and notifications into dependable operations.</p></div></div>
+            <div class="focus-item"><span class="focus-index" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg></span><div><strong>Full-Stack Web Systems</strong><p>Responsive frontends with real backend logic, validation, APIs, and deployment paths.</p></div></div>
           </div>
         </div>
       </section>
@@ -94,13 +105,13 @@
           <div><p class="section-kicker">Core services</p><h2>Services for useful <em>systems.</em></h2></div>
           <p class="section-description">A focused set of capabilities for teams moving from a manual process or rough idea to a clear, testable digital workflow.</p>
         </div>
-        <div class="services-grid">
-          <article class="service-card"><span class="service-number">01</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16M4 8h2M6 8v8M12 6v12M18 9h2"/></svg></span><h3>Agentic AI & AI Agents</h3><p>AI systems that research information, analyze business data, find and qualify prospects, execute multi-step workflows, use tools and APIs, make rule-based decisions, and generate structured reports.</p><p class="service-tags">Research agents · Qualification · Multi-step workflows · Human handoff</p></article>
-          <article class="service-card"><span class="service-number">02</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3Z"/></svg></span><h3>AI Automation</h3><p>Design AI-assisted workflows for automated business processes — lead qualification, customer support automation, email automation, data processing, CRM/workflow automation, and repetitive task automation.</p><p class="service-tags">Workflows · Lead qualification · Support & email automation · Data processing</p></article>
-          <article class="service-card"><span class="service-number">03</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 6.5h.01M11 6.5h.01"/></svg></span><h3>Full-Stack Web Development</h3><p>Modern responsive websites, business websites, and web applications — frontend, backend, REST APIs, database integration, authentication, server-side functionality, and deployment-ready architecture.</p><p class="service-tags">Frontend · Backend · REST APIs · Databases · Deployment</p></article>
-          <article class="service-card"><span class="service-number">04</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8"/></svg></span><h3>Business Automation</h3><p>Connect forms, APIs, data, notifications, and workflows into a more dependable operating flow — reducing manual steps and keeping the business process traceable.</p><p class="service-tags">CRM & workflows · Notifications · Integrations · Operating flow</p></article>
-          <article class="service-card"><span class="service-number">05</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16M7 7h.01M17 17h.01"/></svg></span><h3>API & Backend Development</h3><p>Build secure server-side endpoints, structured responses, validation, rate limiting, and application logic that power frontends, agents, and automated workflows.</p><p class="service-tags">REST endpoints · Validation · Serverless functions · Secure logic</p></article>
-          <article class="service-card"><span class="service-number">06</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></span><h3>Intelligent Business Systems</h3><p>Combined systems where research, automation, and web software work together — an intelligent layer on top of a company's real operating needs.</p><p class="service-tags">Research · Automation · Software · Decision support</p></article>
+        <div class="services-list">
+          <article class="service-item"><span class="service-number">01</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16M4 8h2M6 8v8M12 6v12M18 9h2"/></svg></span><div><h3>Agentic AI & AI Agents</h3><p>AI systems that research information, analyze business data, find and qualify prospects, execute multi-step workflows, use tools and APIs, make rule-based decisions, and generate structured reports.</p></div><span class="service-tags">Research agents · Qualification · Multi-step workflows · Human handoff</span></article>
+          <article class="service-item"><span class="service-number">02</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3Z"/></svg></span><div><h3>AI Automation</h3><p>AI-assisted workflows for automated business processes — lead qualification, customer support automation, email automation, data processing, CRM/workflow automation, and repetitive task automation.</p></div><span class="service-tags">Workflows · Lead qualification · Support & email automation · Data processing</span></article>
+          <article class="service-item"><span class="service-number">03</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 6.5h.01M11 6.5h.01"/></svg></span><div><h3>Full-Stack Web Development</h3><p>Modern responsive websites, business websites, and web applications — frontend, backend, REST APIs, database integration, authentication, server-side functionality, and deployment-ready architecture.</p></div><span class="service-tags">Frontend · Backend · REST APIs · Databases · Deployment</span></article>
+          <article class="service-item"><span class="service-number">04</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8"/></svg></span><div><h3>Business Automation</h3><p>Connect forms, APIs, data, notifications, and workflows into a more dependable operating flow — reducing manual steps and keeping the business process traceable.</p></div><span class="service-tags">CRM & workflows · Notifications · Integrations · Operating flow</span></article>
+          <article class="service-item"><span class="service-number">05</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16M7 7h.01M17 17h.01"/></svg></span><div><h3>API & Backend Development</h3><p>Secure server-side endpoints, structured responses, validation, rate limiting, and application logic that power frontends, agents, and automated workflows.</p></div><span class="service-tags">REST endpoints · Validation · Serverless functions · Secure logic</span></article>
+          <article class="service-item"><span class="service-number">06</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></span><div><h3>Intelligent Business Systems</h3><p>Combined systems where research, automation, and web software work together — an intelligent layer on top of a company's real operating needs.</p></div><span class="service-tags">Research · Automation · Software · Decision support</span></article>
         </div>
       </section>
 
@@ -109,32 +120,37 @@
           <div><p class="section-kicker">AI automation</p><h2>Automation that removes the <em>repetitive layer.</em></h2></div>
           <p class="section-description">AI-assisted workflows that take a manual process, apply structure and rules, and return a dependable automated outcome.</p>
         </div>
+
         <div class="automation-flow" aria-label="Automation workflow diagram">
-          <div class="flow-node"><span class="flow-icon"><svg viewBox="0 0 24 24"><path d="M4 8h16M8 8V5h8v3M4 8v8h16V8M8 12h2M14 12h2"/></svg></span><strong>INPUT</strong><small>Form, email, lead, or signal</small></div>
+          <div class="flow-node"><span class="flow-icon"><svg viewBox="0 0 24 24"><path d="M4 8h16M8 8V5h8v3M4 8v8h16V8M8 12h2M14 12h2"/></svg></span><strong>TRIGGER</strong><small>Form, lead, email, or event</small></div>
           <span class="flow-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg></span>
-          <div class="flow-node"><span class="flow-icon"><svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16M12 6l-4 6h8l-4 6"/></svg></span><strong>AI PROCESSING</strong><small>Classify, extract, decide by rule</small></div>
+          <div class="flow-node"><span class="flow-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 8v4l3 2"/></svg></span><strong>AI AGENT</strong><small>Classify, extract, decide</small></div>
           <span class="flow-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg></span>
-          <div class="flow-node"><span class="flow-icon"><svg viewBox="0 0 24 24"><path d="M12 3v10M12 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12 13l4 8M12 13l-4 8"/></svg></span><strong>DECISION</strong><small>Qualify? Route? Notify?</small></div>
+          <div class="flow-node"><span class="flow-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9M9 19V5M14 19v-6M19 19V3"/></svg></span><strong>RESEARCH / ANALYSIS</strong><small>Public signals · checks</small></div>
           <span class="flow-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg></span>
-          <div class="flow-node"><span class="flow-icon"><svg viewBox="0 0 24 24"><path d="M12 3a5 5 0 0 0-5 5c0 3 2 4 2 6v1h6v-1c0-2 2-3 2-6a5 5 0 0 0-5-5Z"/></svg></span><strong>AUTOMATION</strong><small>Send, create, update, notify</small></div>
+          <div class="flow-node"><span class="flow-icon"><svg viewBox="0 0 24 24"><path d="M12 3v10M12 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12 13l4 8M12 13l-4 8"/></svg></span><strong>DECISION</strong><small>Qualify · route · human review</small></div>
           <span class="flow-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg></span>
-          <div class="flow-node flow-result"><span class="flow-icon"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><strong>BUSINESS RESULT</strong><small>Faster, consistent, traceable</small></div>
+          <div class="flow-node"><span class="flow-icon"><svg viewBox="0 0 24 24"><path d="M12 3a5 5 0 0 0-5 5c0 3 2 4 2 6v1h6v-1c0-2 2-3 2-6a5 5 0 0 0-5-5Z"/></svg></span><strong>AUTOMATION</strong><small>Create · notify · update · send</small></div>
+          <span class="flow-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg></span>
+          <div class="flow-node flow-result"><span class="flow-icon"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><strong>RESULT</strong><small>Logged · traceable · consistent</small></div>
         </div>
+        <p class="flow-note">Every step is logged · decision points stay under human review · AI never runs outside its defined rules</p>
+
         <div class="automation-grid">
           <div>
             <p class="section-kicker">What I build</p>
             <h3>Automated business workflows, end to end</h3>
-            <p class="automation-copy">Instead of a person copying data between tools, the system captures the input once, applies AI and rules, runs the next action, and records the outcome. The human stays in control of decisions that need judgment.</p>
+            <p class="automation-copy">Instead of a person copying data between tools, the system captures the input once, applies AI and rules, runs the next action, and records the outcome. The human stays in control of decisions that need judgment — the machine carries the repetition, routing, and follow-up.</p>
           </div>
-          <ul class="capability-grid">
-            <li>Automated business workflows</li>
-            <li>Lead qualification</li>
-            <li>Customer support automation</li>
-            <li>Email automation</li>
-            <li>Data processing</li>
-            <li>CRM / workflow automation</li>
-            <li>AI-powered business processes</li>
-            <li>Repetitive task automation</li>
+          <ul class="capability-list">
+            <li><span>Lead research</span><small>Fetch, extract, and structure prospect signals</small></li>
+            <li><span>Qualification</span><small>Score accounts against a defined profile</small></li>
+            <li><span>Customer support</span><small>Answer routine questions, escalate the rest</small></li>
+            <li><span>Business workflows</span><small>Connect forms, approvals, and records</small></li>
+            <li><span>Data processing</span><small>Classify, validate, and route data</small></li>
+            <li><span>Email workflows</span><small>Trigger the right message at the right time</small></li>
+            <li><span>Task automation</span><small>Remove repetitive manual steps</small></li>
+            <li><span>API integrations</span><small>Talk to the tools a business already uses</small></li>
           </ul>
         </div>
       </section>
@@ -144,197 +160,261 @@
           <div><p class="section-kicker">Agentic AI & AI agents</p><h2>Agents that research, decide, and <em>hand off.</em></h2></div>
           <p class="section-description">AI agents built with clear inputs, defined rules, tool use, and human review points — not open-ended black boxes.</p>
         </div>
+
         <div class="agents-layout">
-          <div class="agent-flow" aria-label="AI agent workflow">
-            <div class="af-step" data-step="0"><span class="af-index">01</span><strong>User request</strong><small>Website URL, task, or question</small></div>
-            <div class="af-step" data-step="1"><span class="af-index">02</span><strong>AI agent</strong><small>Orchestrates the workflow with defined rules</small></div>
-            <div class="af-step" data-step="2"><span class="af-index">03</span><strong>Research</strong><small>Gathers and validates the right information</small></div>
-            <div class="af-step" data-step="3"><span class="af-index">04</span><strong>Analysis</strong><small>Separates facts from interpretation</small></div>
-            <div class="af-step" data-step="4"><span class="af-index">05</span><strong>Decision</strong><small>Applies rules to qualify or route</small></div>
-            <div class="af-step" data-step="5"><span class="af-index">06</span><strong>Action</strong><small>Uses tools and APIs to execute</small></div>
-            <div class="af-step af-step-end" data-step="6"><span class="af-index">07</span><strong>Human handoff / Result</strong><small>Reviewable output with sources</small></div>
+          <div class="agent-console" aria-label="AI agent operating console">
+            <div class="console-bar"><span class="c-dot"></span><span class="c-dot"></span><span class="c-dot"></span><em>agent run · structured output</em></div>
+            <div class="agent-trace">
+              <div class="trace-row"><span class="trace-index">01</span><strong>User request</strong><span class="trace-value">https://company.com + task</span></div>
+              <span class="trace-conn"></span>
+              <div class="trace-row"><span class="trace-index">02</span><strong>Agent</strong><span class="trace-status">coordinator · rules bound</span></div>
+              <span class="trace-conn"></span>
+              <div class="trace-row trace-tools"><span class="trace-index">03</span><strong>Tools & APIs</strong><span class="tool-chips"><em>HTTP extract</em><em>classify</em><em>report · JSON</em></span></div>
+              <span class="trace-conn"></span>
+              <div class="trace-row"><span class="trace-index">04</span><strong>Research</strong><span class="trace-status">same-domain pages read</span></div>
+              <span class="trace-conn"></span>
+              <div class="trace-row"><span class="trace-index">05</span><strong>Reasoning</strong><span class="trace-status">facts vs hypotheses</span></div>
+              <span class="trace-conn"></span>
+              <div class="trace-row trace-action"><span class="trace-index">06</span><strong>Action</strong><span class="trace-status">brief generated · route decided</span></div>
+              <span class="trace-conn"></span>
+              <div class="trace-result">
+                <p class="trace-out-label">structured output</p>
+                <pre><code>{ "company": "ABZ",
+  "fact": "Software provider",
+  "hypothesis": "B2B sales team",
+  "opportunity": "qualify leads faster",
+  "handoff": "human review" }</code></pre>
+              </div>
+            </div>
           </div>
+
           <div class="agent-panel">
             <p class="agent-panel-title" id="agent-panel-title">The agent works inside clear boundaries</p>
             <p id="agent-panel-text">Select any step to see how the agent behaves. Every agent I build separates verified output from interpretation, uses tools only under defined rules, and routes to a human the moment judgment is required.</p>
-            <a class="button button-primary" href="/agent/">Explore the live agent <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#projects">See the agent project <span aria-hidden="true">↗</span></a>
+            <ol class="agent-steps">
+              <li class="af-step" data-step="0"><span>01</span><strong>User request</strong><small>URL, task, or question</small></li>
+              <li class="af-step" data-step="1"><span>02</span><strong>Agent</strong><small>orchestrates with rules</small></li>
+              <li class="af-step" data-step="2"><span>03</span><strong>Tools</strong><small>HTTP · classify · JSON</small></li>
+              <li class="af-step" data-step="3"><span>04</span><strong>Research</strong><small>validates the right signals</small></li>
+              <li class="af-step" data-step="4"><span>05</span><strong>Reasoning</strong><small>facts vs hypotheses</small></li>
+              <li class="af-step" data-step="5"><span>06</span><strong>Action</strong><small>runs the defined next step</small></li>
+              <li class="af-step" data-step="6"><span>07</span><strong>Handoff / Result</strong><small>reviewable output</small></li>
+            </ol>
           </div>
         </div>
-        <ul class="agent-capabilities">
-          <li>Research information from public sources</li>
-          <li>Analyze business data</li>
-          <li>Find and qualify prospects</li>
-          <li>Execute multi-step workflows</li>
-          <li>Use tools and APIs</li>
-          <li>Make decisions on defined rules</li>
-          <li>Generate structured reports</li>
-          <li>Route tasks to humans when necessary</li>
-        </ul>
+
+        <div class="agent-capabilities" aria-label="Agent capabilities">
+          <span>Research information from public sources</span><span>Analyze business data</span><span>Find and qualify prospects</span><span>Execute multi-step workflows</span><span>Use tools and APIs</span><span>Make decisions on defined rules</span><span>Generate structured reports</span><span>Route tasks to humans when necessary</span>
+        </div>
       </section>
 
       <section class="fullstack-section section-reveal" id="fullstack">
         <div class="section-heading">
           <div><p class="section-kicker">Full-stack web development</p><h2>From interface to <em>server-side logic.</em></h2></div>
-          <p class="section-description">I work the whole stack — responsive frontends, REST APIs, databases, authentication, and deployment-ready architecture.</p>
+          <p class="section-description">I work the whole stack — responsive frontends, REST APIs, server logic, data structure, and deployment. The architecture below is the shape of every project I ship.</p>
         </div>
-        <div class="mockup-row" aria-label="Web development mockups">
-          <figure class="browser-frame"><figcaption>Desktop website · Concept preview</figcaption><div class="browser-bar"><i></i><i></i><i></i><span>https://your-business.com</span></div><div class="browser-body"><div class="b-hero"><span>Your brand</span><div class="b-nav"><i></i><i></i><i></i><i></i></div><h4>Modern web presence<br /><em>built for trust.</em></h4><p>Responsive layout. Clear message. One clear next step.</p><div class="b-btn">Start here</div></div></div></figure>
-          <figure class="phone-frame"><figcaption>Mobile website · Concept preview</figcaption><div class="phone-notch"></div><div class="phone-screen"><span class="p-status"><i></i><i></i><i></i></span><h4>Full-stack<br /><em>delivery.</em></h4><p>Engineered from the interface down to the database.</p><div class="b-btn">Get started</div><div class="p-chips"><i></i><i></i><i></i></div></div></figure>
-          <figure class="dash-frame"><figcaption>Dashboard UI · Generic preview</figcaption><div class="dash-top"><i></i><i></i><i></i></div><div class="dash-kpis"><span><i></i><b></b></span><span><i></i><b></b></span><span><i></i><b></b></span></div><div class="dash-chart"><i style="height:36%"></i><i style="height:58%"></i><i style="height:44%"></i><i style="height:72%"></i><i style="height:52%"></i><i style="height:84%"></i></div><div class="dash-rows"><i></i><i></i><i></i></div></figure>
-          <figure class="code-frame"><figcaption>Backend / API · Real project code</figcaption><div class="code-head"><i></i><i></i><i></i></div><pre><code>exports.handler = async (event) =&gt; {
-  <span class="c-k">if</span> (event.httpMethod !== <span class="c-s">'POST'</span>) <span class="c-k">return</span> deny();
-  <span class="c-k">const</span> input = parse(event.body);
-  <span class="c-k">if</span> (!validate(input)) <span class="c-k">return</span> reject();
-  <span class="c-k">return</span> dispatch(input);
-};</code></pre></figure>
+
+        <div class="stack-layers" aria-label="Full-stack layered architecture">
+          <div class="layer"><span class="layer-index">01</span><div class="layer-title"><strong>FRONTEND</strong><small>Responsive interfaces · HTML · CSS · JavaScript</small></div><span class="layer-chips"><em>UI components</em><em>Forms</em><em>Themes</em></span></div>
+          <span class="layer-conn"><svg viewBox="0 0 24 24"><path d="M12 4v16M7 15l5 5 5-5"/></svg></span>
+          <div class="layer"><span class="layer-index">02</span><div class="layer-title"><strong>API LAYER</strong><small>Structured endpoints · REST · JSON · validation</small></div><span class="layer-chips"><em>REST</em><em>JSON</em><em>Zod schemas</em></span></div>
+          <span class="layer-conn"><svg viewBox="0 0 24 24"><path d="M12 4v16M7 15l5 5 5-5"/></svg></span>
+          <div class="layer"><span class="layer-index">03</span><div class="layer-title"><strong>BACKEND</strong><small>Server-side logic · Node.js · Netlify Functions</small></div><span class="layer-chips"><em>Node.js</em><em>Security</em><em>Rate limits</em></span></div>
+          <span class="layer-conn"><svg viewBox="0 0 24 24"><path d="M12 4v16M7 15l5 5 5-5"/></svg></span>
+          <div class="layer"><span class="layer-index">04</span><div class="layer-title"><strong>DATA</strong><small>Structured records · schemas · sources</small></div><span class="layer-chips"><em>JSON</em><em>Schema validation</em><em>Evidence links</em></span></div>
+          <span class="layer-conn"><svg viewBox="0 0 24 24"><path d="M12 4v16M7 15l5 5 5-5"/></svg></span>
+          <div class="layer layer-end"><span class="layer-index">05</span><div class="layer-title"><strong>INTEGRATIONS & DEPLOYMENT</strong><small>Email providers · public web · version control</small></div><span class="layer-chips"><em>Resend</em><em>Web fetch</em><em>Git · GitHub</em><em>Netlify</em></span></div>
         </div>
-        <div class="fullstack-list">
-          <span>Modern responsive websites</span><span>Business websites</span><span>Web applications</span><span>Frontend development</span><span>Backend development</span><span>REST APIs</span><span>Database integration</span><span>Authentication</span><span>Server-side functionality</span><span>Deployment-ready architecture</span>
-        </div>
+
+        <div class="fullstack-note"><p>The same patterns extend to persistent applications — Express-style routing and database-backed records — when a product needs them. The current portfolio already runs functions, validation, rate limiting, and structured data end to end.</p></div>
+        <div class="fullstack-list"><span>Modern responsive websites</span><span>Business websites</span><span>Web applications</span><span>Frontend development</span><span>Backend development</span><span>REST APIs</span><span>Database integration</span><span>Authentication</span><span>Server-side functionality</span><span>Deployment-ready architecture</span></div>
       </section>
 
       <section class="projects-section section-reveal" id="projects">
         <div class="section-heading">
           <div><p class="section-kicker">Selected work & case studies</p><h2>Proof in the <em>build.</em></h2></div>
-          <p class="section-description">Live systems and honestly-labeled concepts. Each case study shows the problem, the solution, the technology, and the expected business outcome — without inflated claims.</p>
+          <p class="section-description">Live systems and honestly-labeled concepts. Each case study shows the problem, what I built, the stack, and the outcome — without inflated claims.</p>
         </div>
-        <div class="case-grid">
-          <article class="case-card case-live">
-            <div class="case-visual case-visual-research">
-              <span class="case-badge">LIVE SYSTEM / WORKING MVP</span>
-              <figure class="browser-frame"><div class="browser-bar"><i></i><i></i><i></i><span>agent · Prospect Intelligence</span></div><div class="browser-body browser-research"><span class="r-chip">URL</span><span class="r-arrow">→</span><div class="r-result"><i></i><i></i><strong>Structured prospect brief</strong><em>FACT · HYPOTHESIS · OPPORTUNITY</em></div></div></figure>
+
+        <div class="case-list">
+          <article class="case case-live">
+            <div class="case-visual">
+              <span class="case-badge">LIVE SYSTEM</span>
+              <div class="card-project">
+                <div class="card-project-head"><strong>Prospect Intelligence Agent</strong><span>research dashboard</span></div>
+                <div class="card-project-grid">
+                  <div><span class="cp-label">Company</span><strong>ABZ Software</strong><p>B2B software provider</p></div>
+                  <div><span class="cp-label">Industry</span><strong>Software · SaaS</strong><span class="cp-tag">FACT</span></div>
+                  <div><span class="cp-label">Business model</span><strong>Subscription</strong><span class="cp-tag">FACT</span></div>
+                  <div><span class="cp-label">Products / services</span><p>Sales operations platform</p><span class="cp-tag cp-tag-alt">HYPOTHESIS</span></div>
+                  <div><span class="cp-label">Target customer</span><p>B2B revenue teams</p><span class="cp-tag cp-tag-alt">HYPOTHESIS</span></div>
+                  <div><span class="cp-label">Opportunities</span><p>Better qualification and onboarding</p><span class="cp-tag cp-tag-opp">OPPORTUNITY</span></div>
+                </div>
+                <div class="card-project-foot"><span class="cp-pill">Evidence backed</span><span class="cp-pill">Confidence labeled</span><span class="cp-pill">Human review</span></div>
+              </div>
             </div>
-            <div class="project-content">
+            <div class="case-content">
               <div class="project-meta"><span>AI research agent</span><span>Working demo + tests</span></div>
               <h3>Prospect Intelligence Agent</h3>
-              <p>The Research Studio. Accepts a public company website URL and returns a structured prospect brief with source-backed facts separated from AI interpretation.</p>
+              <p class="case-summary">The Research Studio — a live tool that accepts a public company URL and returns a structured prospect brief, with source-backed facts separated from AI interpretation.</p>
               <dl class="project-details">
                 <div><dt>Problem</dt><dd>Manual prospect research is slow, scattered, and hard to repeat consistently.</dd></div>
-                <div><dt>Solution</dt><dd>A research agent that validates the URL, extracts useful same-domain content, and structures facts, analysis, and opportunities separately.</dd></div>
-                <div><dt>Built</dt><dd>URL validation, safe extraction, structured JSON, evidence labels, responsive studio UI, rate limiting, tests</dd></div>
-                <div><dt>Stack</dt><dd>Node.js · Netlify Functions · Cheerio · Zod · Vanilla JavaScript</dd></div>
-                <div><dt>Business purpose</dt><dd>Faster, consistent lead research and qualification context for sales and GTM teams.</dd></div>
-                <div><dt>Expected outcome</dt><dd>A working, tested research route under human review — a real foundation to grow into deeper AI analysis later.</dd></div>
+                <div><dt>What I built</dt><dd>A research agent with URL validation, safe extraction, structured JSON output, evidence labeling, confidence levels, and a responsive studio UI.</dd></div>
+                <div><dt>Tech stack</dt><dd>Node.js · Netlify Functions · Cheerio · Zod · Vanilla JavaScript</dd></div>
+                <div><dt>Key functionality</dt><dd>POST a public URL → validated → pages extracted → facts and hypotheses structured → reviewable report with sources.</dd></div>
+                <div><dt>Outcome</dt><dd>A working, tested research route under human review — a real foundation to grow into deeper AI analysis.</dd></div>
               </dl>
               <div class="project-actions"><a class="button button-primary" href="/agent/">Open Research Studio <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/ayomidfgh-boop/Ayomide-portfolio" target="_blank" rel="noreferrer">Source code <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
 
-          <article class="case-card">
-            <div class="case-visual case-visual-pipeline">
+          <article class="case">
+            <div class="case-visual">
               <span class="case-badge">CONCEPT / DEMO</span>
-              <div class="pipe-frame"><div class="pipe-stage"><span>01</span><i></i><i></i><i></i></div><div class="pipe-arrow">→</div><div class="pipe-stage"><span>02</span><i></i><i></i><i></i></div><div class="pipe-arrow">→</div><div class="pipe-stage pipe-qualified"><span>03</span><strong>Qualified</strong></div></div>
+              <div class="card-project card-pipeline">
+                <div class="card-project-head"><strong>Lead research pipeline</strong><span>concept</span></div>
+                <div class="pipe-track">
+                  <div class="pipe-step"><span class="pipe-index">01</span><strong>Source signals</strong><small>website · content · signals</small><span class="cp-pill">ready</span></div>
+                  <div class="pipe-step"><span class="pipe-index">02</span><strong>Score & classify</strong><small>profile fit · signals</small><span class="cp-pill">review</span></div>
+                  <div class="pipe-step pipe-done"><span class="pipe-index">03</span><strong>Qualified</strong><small>human review</small><span class="cp-pill cp-pill-ok">qualified</span></div>
+                </div>
+              </div>
             </div>
-            <div class="project-content">
+            <div class="case-content">
               <div class="project-meta"><span>AI lead research</span><span>Concept direction</span></div>
               <h3>AI Lead Research & Qualification</h3>
-              <p>Research and qualification system concept — collect company signals, score them against a defined profile, and route qualified prospects to outreach.</p>
+              <p class="case-summary">A pipeline concept that collects company signals, scores them against a defined profile, and routes qualified prospects to outreach.</p>
               <dl class="project-details">
                 <div><dt>Problem</dt><dd>Sales teams spend too long on unqualified, unprioritized lead lists.</dd></div>
-                <div><dt>Solution</dt><dd>A pipeline concept that researches each account, classifies signals, and orders work by fit.</dd></div>
-                <div><dt>Built</dt><dd>Research pipeline, signal classification, qualification output structure</dd></div>
-                <div><dt>Stack</dt><dd>Node.js · Netlify Functions · Structured JSON · Web dashboard</dd></div>
-                <div><dt>Business purpose</dt><dd>Qualify leads before outreach so effort focuses on the right accounts.</dd></div>
-                <div><dt>Expected outcome</dt><dd>A demo direction; validity depends on real account data and human review.</dd></div>
+                <div><dt>What I built</dt><dd>A research pipeline with signal classification and a qualification output structure.</dd></div>
+                <div><dt>Tech stack</dt><dd>Node.js · Netlify Functions · Structured JSON · Web dashboard</dd></div>
+                <div><dt>Key functionality</dt><dd>Source signals → score against profile → qualify for human review before outreach.</dd></div>
+                <div><dt>Outcome</dt><dd>A demo direction; validity depends on real account data and human review.</dd></div>
               </dl>
+              <div class="project-actions"><a class="text-link" href="#contact">Discuss a similar system <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
 
-          <article class="case-card">
-            <div class="case-visual case-visual-automation">
+          <article class="case">
+            <div class="case-visual">
               <span class="case-badge">CONCEPT / DEMO</span>
-              <div class="auto-diagram"><div class="ad-row"><span class="ad-trig">Form submit</span><b>→</b><span class="ad-logic">AI classify</span><b>→</b><span class="ad-act">Create record</span></div><div class="ad-row"><span class="ad-trig">New email</span><b>→</b><span class="ad-logic">Route</span><b>→</b><span class="ad-act ad-act-alt">Notify team</span></div><div class="ad-foot">Every step logged · Human review at decision points</div></div>
+              <div class="card-project card-automation">
+                <div class="card-project-head"><strong>Business automation flow</strong><span>concept</span></div>
+                <div class="auto-track">
+                  <div class="auto-node"><em>Form submit</em></div><b class="auto-arrow">→</b>
+                  <div class="auto-node auto-node-ai"><em>AI classify</em></div><b class="auto-arrow">→</b>
+                  <div class="auto-node"><em>CRM record</em></div><b class="auto-arrow">→</b>
+                  <div class="auto-node auto-node-end"><em>Notify team</em></div>
+                </div>
+                <div class="auto-log"><span>log</span><p>inquiry parsed · qualified · routed · logged</p></div>
+              </div>
             </div>
-            <div class="project-content">
+            <div class="case-content">
               <div class="project-meta"><span>Business automation</span><span>Concept direction</span></div>
               <h3>Business Automation System</h3>
-              <p>A workflow system concept that connects triggers, AI processing, and actions so back-office operations run without manual copying between tools.</p>
+              <p class="case-summary">A workflow system that connects triggers, AI processing, and actions so back-office operations run without manual copying between tools.</p>
               <dl class="project-details">
                 <div><dt>Problem</dt><dd>Manual back-office operations are slow and depend on a few people.</dd></div>
-                <div><dt>Solution</dt><dd>Automation flows connecting forms, data, notifications, and external tools.</dd></div>
-                <div><dt>Built</dt><dd>Trigger → action workflow design, logged steps, decision-point routing</dd></div>
-                <div><dt>Stack</dt><dd>Serverless functions · REST APIs · Webhooks · Structured data</dd></div>
-                <div><dt>Business purpose</dt><dd>A dependable operating flow that removes repetitive manual steps.</dd></div>
-                <div><dt>Expected outcome</dt><dd>Concept pending a real process to automate and validate.</dd></div>
+                <div><dt>What I built</dt><dd>Trigger → action workflow designs with logged steps and decision-point routing.</dd></div>
+                <div><dt>Tech stack</dt><dd>Serverless functions · REST APIs · Webhooks · Structured data</dd></div>
+                <div><dt>Key functionality</dt><dd>Form, lead, or email in → AI classifies → record created → team notified, every step logged.</dd></div>
+                <div><dt>Outcome</dt><dd>Concept pending a real process to automate and validate.</dd></div>
               </dl>
+              <div class="project-actions"><a class="text-link" href="#contact">Discuss a similar system <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
 
-          <article class="case-card case-live">
-            <div class="case-visual case-visual-portfolio">
-              <span class="case-badge">LIVE SYSTEM / THIS SITE</span>
-              <figure class="browser-frame"><div class="browser-bar"><i></i><i></i><i></i><span>ayomide.dev · portfolio</span></div><div class="browser-body browser-site"><span class="site-dot"></span><h4>AI & full-stack <em>work.</em></h4><div class="site-lines"><i></i><i></i><i></i><i></i></div></div></figure>
+          <article class="case case-live">
+            <div class="case-visual">
+              <span class="case-badge">LIVE SYSTEM</span>
+              <div class="card-project card-site">
+                <div class="card-project-head"><strong>Portfolio platform</strong><span>this website</span></div>
+                <div class="site-mini">
+                  <div class="site-mini-nav"><span>o</span><em>Ayo</em><b></b><b></b><b></b><b></b><i></i></div>
+                  <p class="site-mini-eyebrow">AI ENGINEERING · AGENTIC AI · FULL-STACK</p>
+                  <h4>AI-Powered Systems That Automate<br /><em>Real Business Work</em></h4>
+                  <p class="site-mini-copy">AI agents, automation workflows, and full-stack systems for practical business outcomes.</p>
+                  <div class="site-mini-actions"><span class="run-pill">View selected work</span><span class="pill-quiet">Research Studio</span></div>
+                </div>
+              </div>
             </div>
-            <div class="project-content">
+            <div class="case-content">
               <div class="project-meta"><span>Full-stack website</span><span>Live + responsive</span></div>
               <h3>AI-Focused Portfolio Platform</h3>
-              <p>This site — a responsive professional platform that communicates services, presents case studies, connects to a live research studio, and supports direct contact through a server-side function.</p>
+              <p class="case-summary">This site — a responsive professional platform that communicates services, presents case studies, connects to a live research studio, and supports direct contact through a server-side function.</p>
               <dl class="project-details">
-                <div><dt>Problem</dt><dd>Complex capabilities are hard to communicate, and a portfolio that only lists skills proves nothing.</dd></div>
-                <div><dt>Solution</dt><dd>A platform that pairs clear messaging with a working research product instead of a wall of claims.</dd></div>
-                <div><dt>Built</dt><dd>Responsive layout, navigation, theme toggle, research studio route, server-side contact workflow, CV delivery</dd></div>
-                <div><dt>Stack</dt><dd>HTML · CSS · JavaScript · Netlify Functions · Netlify · GitHub</dd></div>
-                <div><dt>Business purpose</dt><dd>A credible, verifiable professional presence for AI and web work.</dd></div>
-                <div><dt>Expected outcome</dt><dd>The working platform you are reading, served across desktop and mobile.</dd></div>
+                <div><dt>Problem</dt><dd>Complex capabilities are hard to communicate; a portfolio that only lists skills proves nothing.</dd></div>
+                <div><dt>What I built</dt><dd>Responsive layout, navigation, theme toggle, research studio route, server-side contact workflow, CV delivery.</dd></div>
+                <div><dt>Tech stack</dt><dd>HTML · CSS · JavaScript · Netlify Functions · Netlify · GitHub</dd></div>
+                <div><dt>Key functionality</dt><dd>Services, case studies, live research product, and a contact workflow backed by a serverless function.</dd></div>
+                <div><dt>Outcome</dt><dd>The working platform you are reading, served across desktop and mobile.</dd></div>
               </dl>
               <div class="project-actions"><a class="text-link" href="#contact">Discuss a similar build <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/ayomidfgh-boop/Ayomide-portfolio" target="_blank" rel="noreferrer">Source code <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
 
-          <article class="case-card">
-            <div class="case-visual case-visual-commerce">
+          <article class="case">
+            <div class="case-visual">
               <span class="case-badge">CONCEPT / RETAINED DIRECTION</span>
-              <figure class="phone-frame phone-store"><div class="phone-notch"></div><div class="phone-screen"><span class="p-status"><i></i><i></i><i></i></span><header class="store-head">AYOLUX <em>Watches</em></header><div class="store-card"><i class="store-img"></i><b>Chronos · Steel</b><span>Premium wristwatch</span><div class="b-btn">View product</div></div></div></figure>
+              <div class="card-project card-store">
+                <div class="card-project-head"><strong>Ayolux — storefront concept</strong><span>e-commerce</span></div>
+                <div class="store-grid">
+                  <div class="store-tile"><span class="watch-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="1.5"/><path d="M12 8v4l3 2M9.5 3h5M9.5 21h5"/></svg></span><strong>Chronos Steel</strong><span class="cp-tag cp-tag-alt">concept product</span></div>
+                  <div class="store-tile"><span class="watch-mark watch-mark-2" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 9v3l2 2"/></svg></span><strong>Aviator Classic</strong><span class="cp-tag cp-tag-alt">concept product</span></div>
+                </div>
+              </div>
             </div>
-            <div class="project-content">
+            <div class="case-content">
               <div class="project-meta"><span>E-commerce experience</span><span>Concept direction</span></div>
               <h3>Ayolux E-commerce Experience</h3>
-              <p>A premium retail brand direction for a wristwatch e-commerce experience — product showcase, mobile-first storefront, and a clear path to purchase.</p>
+              <p class="case-summary">A premium retail direction for a wristwatch e-commerce experience — product showcase, mobile-first storefront, and a clear path to purchase.</p>
               <dl class="project-details">
                 <div><dt>Problem</dt><dd>A premium brand needs a storefront that feels premium and converts on mobile.</dd></div>
-                <div><dt>Solution</dt><dd>A retail concept designed around a product showcase with a clear conversion path.</dd></div>
-                <div><dt>Built</dt><dd>Product-card mockup, brand direction, mobile-first layout concept</dd></div>
-                <div><dt>Stack</dt><dd>HTML · CSS · JavaScript (concept)</dd></div>
-                <div><dt>Business purpose</dt><dd>Demonstrates an e-commerce and retail storefront capability.</dd></div>
-                <div><dt>Expected outcome</dt><dd>Concept direction — not a live store and not presented as a completed client project.</dd></div>
+                <div><dt>What I built</dt><dd>A retail concept designed around a product showcase with a clear conversion path.</dd></div>
+                <div><dt>Tech stack</dt><dd>HTML · CSS · JavaScript (concept)</dd></div>
+                <div><dt>Key functionality</dt><dd>Product grid, brand language, mobile-first layout concept.</dd></div>
+                <div><dt>Outcome</dt><dd>Concept direction — not a live store and not presented as a completed client project.</dd></div>
               </dl>
+              <div class="project-actions"><a class="text-link" href="#contact">Discuss an e-commerce build <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
 
-          <article class="case-card">
-            <div class="case-visual case-visual-assistant">
+          <article class="case">
+            <div class="case-visual">
               <span class="case-badge">CONCEPT / IN PROGRESS</span>
-              <figure class="phone-frame phone-chat"><div class="phone-notch"></div><div class="phone-screen"><span class="p-status"><i></i><i></i><i></i></span><div class="chat"><span class="chat-user">How much do you charge?</span><span class="chat-agent">Let me connect you with Ayo.</span><span class="chat-hint">Escalated to a human</span></div></div></figure>
+              <div class="card-project card-chat">
+                <div class="card-project-head"><strong>AI business assistant</strong><span>agent workflow</span></div>
+                <div class="chat-ui">
+                  <div class="chat-bubble chat-in"><p>How do I get started with your product?</p></div>
+                  <div class="chat-bubble chat-out"><p>Let me check the guide and route you to Ayo.</p></div>
+                  <div class="chat-bubble chat-in"><p>Do you customize workflows?</p></div>
+                  <div class="chat-bubble chat-out chat-out-alt"><p>That needs a human — connecting you now.</p></div>
+                  <div class="chat-pill"><span>Escalated to a human</span></div>
+                </div>
+              </div>
             </div>
-            <div class="project-content">
+            <div class="case-content">
               <div class="project-meta"><span>AI agent workflow</span><span>Concept direction</span></div>
               <h3>AI Agent Workflow & Business Assistant</h3>
-              <p>An assistant concept for common customer questions — the agent answers from defined knowledge, and escalates to a human the moment judgment is required.</p>
+              <p class="case-summary">An assistant concept for common customer questions — the agent answers from defined knowledge and escalates to a human the moment judgment is required.</p>
               <dl class="project-details">
-                <div><dt>Problem</dt><dd>Common customer questions consume staff time that is better spent elsewhere.</dd></div>
-                <div><dt>Solution</dt><dd>An agent workflow that answers routine questions and routes the rest to a human.</dd></div>
-                <div><dt>Built</dt><dd>Conversation interface mockup, escalation path design</dd></div>
-                <div><dt>Stack</dt><dd>Frontend prototype · serverless function provider (designed)</dd></div>
-                <div><dt>Business purpose</dt><dd>Lower support load while keeping the human handoff reliable.</dd></div>
-                <div><dt>Expected outcome</dt><dd>In-progress direction; a production version would require defined knowledge sources.</dd></div>
+                <div><dt>Problem</dt><dd>Common customer questions consume staff time better spent elsewhere.</dd></div>
+                <div><dt>What I built</dt><dd>A conversation interface mockup with an escalation path design.</dd></div>
+                <div><dt>Tech stack</dt><dd>Frontend prototype · serverless function provider (designed)</dd></div>
+                <div><dt>Key functionality</dt><dd>Routine questions answered; judgment calls routed to a human with context.</dd></div>
+                <div><dt>Outcome</dt><dd>In-progress direction; a production version requires defined knowledge sources.</dd></div>
               </dl>
+              <div class="project-actions"><a class="text-link" href="#contact">Discuss an agent build <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
         </div>
-      </section>
 
-      <section class="concepts-section section-reveal" aria-labelledby="concepts-title">
-        <div class="section-heading">
-          <div><p class="section-kicker">Earlier directions</p><h2 id="concepts-title">Ideas still taking <em>shape.</em></h2></div>
-          <p class="section-description">Retained from the earlier portfolio as concepts or work in development, not completed client projects.</p>
-        </div>
-        <div class="concepts-grid">
-          <article><span>Concept / prototype</span><h3>AI Business Agent</h3><p>Research businesses, surface opportunities, and prepare useful next steps.</p></article>
-          <article><span>In development</span><h3>GTM Lead Research System</h3><p>Explore account research, qualification, and personalized outreach context.</p></article>
-          <article><span>Business concept</span><h3>Ayotech Business Solution</h3><p>A digital and AI-focused business direction for reducing repetitive work.</p></article>
-          <article><span>Concept / prototype</span><h3>Ayolux E-commerce</h3><p>A premium wristwatch brand and e-commerce experience direction.</p></article>
-          <article><span>In progress</span><h3>AI Business Assistant</h3><p>An assistant concept for common customer questions with human support close at hand.</p></article>
+        <div class="concepts-grid section-reveal" aria-labelledby="concepts-title">
+          <div class="concepts-head" id="concepts-title"><p class="section-kicker">Earlier directions</p><h3>Ideas still taking <em>shape.</em></h3><p>Retained from the earlier portfolio as concepts or work in development, not completed client projects.</p></div>
+          <article><span>Concept / prototype</span><h4>AI Business Agent</h4><p>Research businesses, surface opportunities, and prepare useful next steps.</p></article>
+          <article><span>In development</span><h4>GTM Lead Research System</h4><p>Account research, qualification, and personalized outreach context.</p></article>
+          <article><span>Business concept</span><h4>Ayotech Business Solution</h4><p>A digital and AI-focused business direction for reducing repetitive work.</p></article>
+          <article><span>In progress</span><h4>AI Business Assistant</h4><p>Common customer questions with human support close at hand.</p></article>
         </div>
       </section>
 
@@ -361,12 +441,12 @@
           <p class="section-description">Common business friction — matched with the type of system I build for it.</p>
         </div>
         <div class="problem-grid">
-          <article><span class="problem-badge">Problem</span><h3>Repetitive manual work</h3><p>People copy data between tools every day.</p><b>→</b><span class="solution-badge">System</span><h3>Automated workflows</h3><p>Capture once, process by rule, run the action, log it.</p></article>
-          <article><span class="problem-badge">Problem</span><h3>Slow lead research</h3><p>Manually checking every prospect website takes hours.</p><b>→</b><span class="solution-badge">System</span><h3>Research agents</h3><p>Extract and structure a prospect brief in one request.</p></article>
-          <article><span class="problem-badge">Problem</span><h3>Poor follow-up</h3><p>Leads go cold because nothing triggers the next step.</p><b>→</b><span class="solution-badge">System</span><h3>Follow-up automation</h3><p>Rules fire the right message at the right time.</p></article>
-          <article><span class="problem-badge">Problem</span><h3>Scattered business information</h3><p>Facts live in emails, docs, and people's heads.</p><b>→</b><span class="solution-badge">System</span><h3>Structured research & records</h3><p>Sources and evidence organized into one place.</p></article>
-          <article><span class="problem-badge">Problem</span><h3>Manual data processing</h3><p>Forms, files, and spreadsheets processed by hand.</p><b>→</b><span class="solution-badge">System</span><h3>Data processing workflows</h3><p>Classify, validate, and route data programmatically.</p></article>
-          <article><span class="problem-badge">Problem</span><h3>Inefficient workflows</h3><p>Steps that don't connect, stall, or depend on memory.</p><b>→</b><span class="solution-badge">System</span><h3>Whole-stack systems</h3><p>Software that connects the workflow end to end.</p></article>
+          <article><span class="problem-badge">Problem</span><h3>Repetitive manual work</h3><p>People copy data between tools every day.</p><b aria-hidden="true">→</b><span class="solution-badge">System</span><h3>Automated workflows</h3><p>Capture once, process by rule, run the action, log it.</p></article>
+          <article><span class="problem-badge">Problem</span><h3>Slow lead research</h3><p>Manually checking every prospect website takes hours.</p><b aria-hidden="true">→</b><span class="solution-badge">System</span><h3>Research agents</h3><p>Extract and structure a prospect brief in one request.</p></article>
+          <article><span class="problem-badge">Problem</span><h3>Poor follow-up</h3><p>Leads go cold because nothing triggers the next step.</p><b aria-hidden="true">→</b><span class="solution-badge">System</span><h3>Follow-up automation</h3><p>Rules fire the right message at the right time.</p></article>
+          <article><span class="problem-badge">Problem</span><h3>Scattered business information</h3><p>Facts live in emails, docs, and people's heads.</p><b aria-hidden="true">→</b><span class="solution-badge">System</span><h3>Structured research & records</h3><p>Sources and evidence organized into one place.</p></article>
+          <article><span class="problem-badge">Problem</span><h3>Manual data processing</h3><p>Forms, files, and spreadsheets processed by hand.</p><b aria-hidden="true">→</b><span class="solution-badge">System</span><h3>Data processing workflows</h3><p>Classify, validate, and route data programmatically.</p></article>
+          <article><span class="problem-badge">Problem</span><h3>Inefficient workflows</h3><p>Steps that don't connect, stall, or depend on memory.</p><b aria-hidden="true">→</b><span class="solution-badge">System</span><h3>Whole-stack systems</h3><p>Software that connects the workflow end to end.</p></article>
         </div>
       </section>
 
@@ -395,38 +475,42 @@
           <div><p class="section-kicker">Process</p><h2>A clear path from <em>problem to system.</em></h2></div>
           <p class="section-description">Projects stay grounded in the workflow they are meant to improve.</p>
         </div>
-        <div class="process-grid">
-          <article><span>01</span><h3>Discover</h3><p>Understand the business problem, users, constraints, and desired next action.</p></article>
-          <article><span>02</span><h3>Research</h3><p>Gather the inputs, data, and external signals the system will work with.</p></article>
-          <article><span>03</span><h3>Design</h3><p>Structure the workflow, data, interface, and human decision points.</p></article>
-          <article><span>04</span><h3>Build</h3><p>Develop the frontend, backend, and automation around real inputs and outputs.</p></article>
-          <article><span>05</span><h3>Integrate</h3><p>Connect forms, APIs, databases, notifications, and external tools.</p></article>
-          <article><span>06</span><h3>Test</h3><p>Validate inputs, outputs, routes, and failure cases with automated tests.</p></article>
-          <article><span>07</span><h3>Deploy</h3><p>Ship a production-ready system with a clear deployment path.</p></article>
-          <article><span>08</span><h3>Improve</h3><p>Review what works, document limitations, and improve from evidence.</p></article>
-        </div>
+        <ol class="process-list">
+          <li><span>01</span><h3>Discover</h3><p>Understand the business problem, users, constraints, and desired next action.</p></li>
+          <li><span>02</span><h3>Research</h3><p>Gather the inputs, data, and external signals the system will work with.</p></li>
+          <li><span>03</span><h3>Design</h3><p>Structure the workflow, data, interface, and human decision points.</p></li>
+          <li><span>04</span><h3>Build</h3><p>Develop the frontend, backend, and automation around real inputs and outputs.</p></li>
+          <li><span>05</span><h3>Integrate</h3><p>Connect forms, APIs, databases, notifications, and external tools.</p></li>
+          <li><span>06</span><h3>Test</h3><p>Validate inputs, outputs, routes, and failure cases with automated tests.</p></li>
+          <li><span>07</span><h3>Deploy</h3><p>Ship a production-ready system with a clear deployment path.</p></li>
+          <li><span>08</span><h3>Improve</h3><p>Review what works, document limitations, and improve from evidence.</p></li>
+        </ol>
       </section>
 
       <section class="contact-section section-reveal" id="contact">
-        <div class="contact-heading">
-          <p class="section-kicker">Start a conversation</p>
-          <h2>Have a workflow worth <em>improving?</em></h2>
-          <p>Share the problem, the current process, and what a useful outcome would look like. I reply to every serious inquiry.</p>
-        </div>
         <div class="contact-layout">
           <div class="contact-aside">
-            <span class="contact-number">03</span>
-            <p>Lagos, Nigeria<br />Working across the internet</p>
-            <span class="contact-email">ayomidfgh@gmail.com</span>
-            <p class="contact-note">Project inquiries, AI workflow ideas, and web application builds are welcome.</p>
+            <p class="section-kicker">Contact</p>
+            <h2>Let's build something <em>useful.</em></h2>
+            <p class="contact-lead">Share the problem, the current process, and what a useful outcome would look like. I reply to every serious inquiry.</p>
+            <div class="contact-info">
+              <div><span class="contact-info-label">Email</span><a class="contact-email" href="mailto:ayomidfgh@gmail.com">ayomidfgh@gmail.com <span aria-hidden="true">↗</span></a></div>
+              <div><span class="contact-info-label">Location</span><p>Lagos, Nigeria — working across the internet</p></div>
+            </div>
+            <div class="contact-social" aria-label="Professional profiles">
+              <a href="https://github.com/ayomidfgh-boop/Ayomide-portfolio" target="_blank" rel="noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-2.69 16.56c.43.08.59-.19.59-.42v-1.64c-2.39.52-2.9-1.02-2.9-1.02-.39-.99-.96-1.25-.96-1.25-.78-.53.06-.52.06-.52.86.06 1.31.88 1.31.88.76 1.3 1.99.92 2.48.7.08-.55.3-.92.54-1.13-1.91-.22-3.92-.96-3.92-4.26 0-.94.34-1.71.9-2.31-.09-.22-.39-1.09.09-2.28 0 0 .73-.23 2.34.88a8.1 8.1 0 0 1 4.26 0c1.61-1.11 2.34-.88 2.34-.88.48 1.19.18 2.06.09 2.28.56.6.9 1.37.9 2.31 0 3.31-2.01 4.03-3.93 4.25.31.27.58.8.58 1.61v2.39c0 .23.16.5.59.42A8.5 8.5 0 0 0 12 3.5Z"/></svg></a><a href="https://x.com/ibrahim_ay62338" target="_blank" rel="noreferrer" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4 19 20M19 4 5 20"/></svg></a><a href="https://www.facebook.com/share/1JPLAz8tw/?mibextid=wwXIfr" target="_blank" rel="noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h3V1h-3c-2.76 0-5 2.24-5 5v3H6v3h3v8h3v-8h3l1-3h-4V6c0-1.1.9-2 2-2Z"/></svg></a>
+              <span class="contact-social-note">Project inquiries, AI workflow ideas, and web application builds are welcome.</span>
+            </div>
           </div>
           <form class="contact-form" id="contact-form" novalidate>
             <label for="contact-name">Name<input id="contact-name" type="text" name="name" placeholder="Your name" minlength="2" maxlength="100" required /></label>
-            <label for="contact-email">Email<input id="contact-email" type="email" name="email" placeholder="you@company.com" maxlength="200" required /></label>
-            <label for="project-type">Project type<select id="project-type" name="projectType" required><option value="">Choose a project type</option><option>AI automation</option><option>AI agent or research workflow</option><option>Full-stack web application</option><option>Business website or landing page</option><option>API or backend system</option><option>Business automation system</option><option>Other</option></select></label>
+            <div class="form-row">
+              <label for="contact-email">Email<input id="contact-email" type="email" name="email" placeholder="you@company.com" maxlength="200" required /></label>
+              <label for="project-type">Project type<select id="project-type" name="projectType" required><option value="">Select one</option><option>AI automation</option><option>AI agent or research workflow</option><option>Full-stack web application</option><option>Business website or landing page</option><option>API or backend system</option><option>Business automation system</option><option>Other</option></select></label>
+            </div>
             <label for="contact-message">Message<textarea id="contact-message" name="message" rows="5" minlength="10" maxlength="4000" placeholder="What are you trying to build or improve?" required></textarea></label>
             <input class="form-trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
-            <button class="button button-primary" type="submit">Send Message <span aria-hidden="true">↗</span></button>
+            <div class="form-submit-row"><button class="button button-primary" type="submit">Send message <span aria-hidden="true">↗</span></button><p class="form-note">Powered by a server-side Resend function · no data is stored on the page.</p></div>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -434,8 +518,8 @@
     </main>
 
     <footer class="footer">
-      <div>
-        <a class="wordmark" href="#home"><span class="wordmark-mark">A</span><span>Ayo</span></a>
+      <div class="footer-brand">
+        <a class="wordmark" href="#home"><span class="wordmark-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4 18 20M12 4 6 20M9 14h6"/></svg></span><span>Ayo</span></a>
         <p>AI Engineer & Full-Stack Developer<br />AI agents · Automation · Web systems</p>
       </div>
       <nav class="footer-links" aria-label="Footer navigation">
@@ -444,6 +528,6 @@
       <div class="footer-meta"><span>© 2026 Ayo</span><span>Lagos, Nigeria</span></div>
     </footer>
   </div>
-  <script src="script.js?v=13"></script>
+  <script src="script.js?v=14"></script>
 </body>
 </html>
