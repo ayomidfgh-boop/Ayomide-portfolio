@@ -2,28 +2,7 @@
 
 A responsive personal portfolio built with plain HTML, CSS and JavaScript. It is ready for static deployment on Vercel or Netlify.
 
-## Step 1 - Connect the real contact form
-
-The form uses Formspree when configured, so submissions can arrive by email without exposing a private API key. Until an endpoint is added, it opens a pre-filled email draft instead and clearly tells the visitor what is happening.
-
-1. Create an account at https://formspree.io.
-2. Create a new form and set the destination email to `ayomidfgh@gmail.com`.
-3. Copy the endpoint Formspree gives you.
-4. Open `script.js` and replace the empty value here:
-
-```js
-formspreeEndpoint: '',
-```
-
-with your real endpoint:
-
-```js
-formspreeEndpoint: 'PASTE_YOUR_REAL_FORMSPREE_ENDPOINT_HERE',
-```
-
-Real form delivery is not connected until this value is supplied. Until then, the fallback opens the visitor's email app with the name, email, and message prepared. No secret key belongs in this file.
-
-## Step 2 - Deploy on Vercel
+## Deployment
 
 1. Create or sign in to a Vercel account at https://vercel.com.
 2. Choose **Add New** and **Project**.
@@ -57,3 +36,47 @@ After adding the Formspree endpoint, submit the form from a different email acco
 ## Local preview
 
 Use a static server such as `npx http-server . -p 4173`, then open the local address printed in the terminal.
+
+## Prospect Intelligence Agent
+
+The repository also contains a separate MVP research studio at `/agent/`. It accepts one public company website URL, extracts a bounded set of readable same-domain pages, and generates a structured prospect research brief with deterministic local logic. The basic workflow does not require an AI provider or API key.
+
+### Local setup
+
+1. Install dependencies with `npm install`.
+2. Run the site and Netlify Function locally with `npm run dev`.
+3. Open `http://localhost:8888/agent/`.
+
+The function endpoint is `/.netlify/functions/research` and accepts a `POST` request with `websiteUrl` and an optional `userOffer`.
+
+Do not use a static server such as `npx http-server` for this feature. A static server can render `/agent/`, but it cannot execute `netlify/functions/research.js`, so the function URL will not return a research response.
+
+### MVP boundaries
+
+- Only public HTTP and HTTPS websites are supported.
+- Research is limited to the homepage and a small number of relevant same-domain pages.
+- Login-protected pages, private sources, social profiles, bulk URLs, and automated outreach are out of scope.
+- Verified facts include source URLs and evidence excerpts. Deterministic hypotheses are presented separately and require human review.
+- No research history database or user authentication is included in v1.
+
+The current provider is `local-deterministic`. It uses public page metadata, headings, readable text, keyword classification, and explicit limitation labels. OpenAI can be added later as a separate provider without changing the frontend contract.
+
+The `.env` file and `OPENAI_*` values are optional placeholders for that future provider. They are not read by the current basic research flow.
+
+### Contact delivery
+
+The homepage contact form posts JSON to `/.netlify/functions/contact`. It uses the Resend transactional email API and does not claim success unless Resend accepts the message. Configure these server-side variables for delivery:
+
+```env
+CONTACT_RECEIVER_EMAIL=your-inbox@example.com
+CONTACT_SENDER_EMAIL=Portfolio <onboarding@resend.dev>
+RESEND_API_KEY=re_your_key
+```
+
+The sender address must be permitted by the email provider. The visitor's email is used as `Reply-To`. Without these values, the form returns a clear configuration error rather than pretending to send.
+
+For a custom sending domain, configure the provider's SPF and DKIM records and publish a DMARC policy for that domain. This repository cannot verify DNS ownership or inbox placement from local development.
+
+### Checks
+
+Run `npm test` to execute the validation, extraction, and structured-output tests.

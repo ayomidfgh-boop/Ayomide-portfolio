@@ -1,5 +1,31 @@
 [build]
   publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/agent"
+  to = "/prospect-agent/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/agent/"
+  to = "/prospect-agent/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/agent/styles.css"
+  to = "/prospect-agent/styles.css"
+  status = 200
+
+[[redirects]]
+  from = "/agent/app.js"
+  to = "/prospect-agent/app.js"
+  status = 200
+
+[[redirects]]
+  from = "/agent/*"
+  to = "/prospect-agent/index.html"
+  status = 200
 
 [[headers]]
   for = "/*"

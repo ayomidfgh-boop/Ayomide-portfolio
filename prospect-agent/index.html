@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prospect Intelligence Agent: AI-assisted research from public company websites into a structured, source-backed prospect brief." />
+  <title>Prospect Intelligence Agent | Ayomide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <div class="agent-shell">
+    <header class="agent-header">
+      <a class="brand" href="../index.html"><span class="brand-mark">A</span><span>Ayomide / Research Studio</span></a>
+      <a class="back-link" href="../index.html">Back to portfolio <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="agent-hero" aria-labelledby="page-title">
+        <div class="hero-label"><span class="pulse"></span> AI-assisted GTM research — live system</div>
+        <h1 id="page-title">Turn a company website into a clearer <em>prospect brief.</em></h1>
+        <p class="hero-copy">Give the agent a public company URL. It extracts visible website content, separates source-backed facts from interpretation, and returns a structured research starting point for human review — with confidence labels and evidence throughout.</p>
+        <div class="hero-proof"><span>Verified facts separated from analysis</span><span>Confidence labels</span><span>Sources on every claim</span><span>Runs on Netlify Functions</span></div>
+      </section>
+
+      <section class="workspace" aria-label="Prospect research workspace">
+        <form class="research-form" id="research-form">
+          <div class="form-heading"><span class="section-number">01</span><div><p class="eyebrow">Start with context</p><h2>Research a company</h2></div></div>
+          <label for="website-url">Public company website <span>Required</span></label>
+          <input id="website-url" name="websiteUrl" type="url" placeholder="https://company.com" autocomplete="url" required />
+          <p class="field-hint">Use a public homepage. Login-protected sites and private sources are not supported.</p>
+          <label for="user-offer">Your offer or ideal customer context <span>Optional</span></label>
+          <textarea id="user-offer" name="userOffer" rows="4" maxlength="2000" placeholder="Example: We help B2B software companies improve outbound research and qualification."></textarea>
+          <div class="form-actions"><button class="primary-button" type="submit" id="submit-button">Generate research brief <span aria-hidden="true">↗</span></button><button class="example-button" type="button" id="example-button">Load example</button></div>
+          <p class="privacy-note">The first version processes public website content only, with deterministic local rules. Analysis is a hypothesis and should be reviewed before use.</p>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+        </form>
+
+        <aside class="workflow-panel" aria-label="Research workflow">
+          <p class="eyebrow">What happens next</p>
+          <div class="workflow-step"><span>01</span><div><strong>Validate</strong><p>Check that the URL is public and safe to fetch.</p></div></div>
+          <div class="workflow-step"><span>02</span><div><strong>Extract</strong><p>Read useful content from a small set of relevant pages.</p></div></div>
+          <div class="workflow-step"><span>03</span><div><strong>Analyze</strong><p>Structure facts, inferences, and opportunities separately.</p></div></div>
+          <div class="workflow-foot">Built for focused research, not automated outreach.</div>
+        </aside>
+      </section>
+
+      <section class="results" id="results" aria-live="polite" hidden>
+        <div class="results-header">
+          <div><p class="eyebrow">Research output</p><h2 id="result-title">Research brief</h2><p class="result-meta" id="result-meta"></p></div>
+          <div class="result-actions"><button type="button" class="secondary-button" id="copy-button">Copy JSON</button><button type="button" class="secondary-button" id="download-button">Download JSON</button></div>
+        </div>
+        <div class="result-notice"><strong>Human review required.</strong> Verified facts come from the supplied public pages. Everything else is labeled and must be reviewed before any business decision.</div>
+
+        <div class="label-key" aria-label="Result label legend">
+          <span class="tag tag-fact">FACT — source-backed</span>
+          <span class="tag tag-hyp">HYPOTHESIS — interpretation</span>
+          <span class="tag tag-opp">OPPORTUNITY — potential opening</span>
+          <span class="tag tag-rec">RECOMMENDATION — next action</span>
+        </div>
+
+        <div class="result-grid">
+          <article class="result-card result-card-wide"><div class="card-label">Company overview <span>Source-backed where available</span></div><div id="company-overview"></div></article>
+
+          <article class="result-card"><div class="card-label">Industry & business model</div><div id="business-model"></div></article>
+
+          <article class="result-card"><div class="card-label">Target customers / ideal customer profile</div><div id="audience-list"></div></article>
+
+          <article class="result-card"><div class="card-label">Products & services</div><div id="products-list"></div></article>
+
+          <article class="result-card result-card-wide facts-card"><div class="card-label"><span class="tag tag-fact">FACT</span> Verified evidence <span>Directly supported by fetched pages</span></div><div id="facts-list"></div></article>
+
+          <article class="result-card hyp-card"><div class="card-label"><span class="tag tag-hyp">HYPOTHESIS</span> Likely business priorities</div><div id="priorities-list"></div></article>
+
+          <article class="result-card hyp-card"><div class="card-label"><span class="tag tag-hyp">HYPOTHESIS</span> Business problems</div><div id="business-problems"></div></article>
+
+          <article class="result-card opp-card"><div class="card-label"><span class="tag tag-opp">OPPORTUNITY</span> Potential opportunities & AI automation angles</div><div id="opportunities-list"></div></article>
+
+          <article class="result-card rec-card"><div class="card-label"><span class="tag tag-rec">RECOMMENDATION</span> Qualification & action plan</div><div id="action-plan"></div></article>
+
+          <article class="result-card result-card-wide"><div class="card-label">Signal map <span>What this research pass could and could not surface</span></div><div class="signal-map" id="signal-map"></div></article>
+
+          <article class="result-card result-card-wide"><div class="card-label">Research sources & limits</div><div class="sources-columns"><div id="sources-list"></div><div id="limitations-list"></div></div></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="agent-footer"><span>Prospect Intelligence Agent</span><span>AI-assisted research for human review</span></footer>
+  </div>
+  <script src="app.js?v=2"></script>
+</body>
+</html>
