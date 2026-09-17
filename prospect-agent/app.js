@@ -126,7 +126,7 @@ function renderResult(data) {
   results.hidden = false; results.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function setLoading(loading) { submitButton.disabled = loading; submitButton.textContent = loading ? 'Researching website…' : 'Generate research brief ↗'; }
+function setLoading(loading) { submitButton.disabled = loading; submitButton.innerHTML = loading ? 'Researching website…' : 'Generate research brief <span class="icon-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span>'; }
 
 async function readJsonResponse(response) {
   const contentType = response.headers.get('content-type') || '';

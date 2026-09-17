@@ -96,7 +96,56 @@ contactForm.addEventListener('submit', async event => {
   } finally {
     contactSubmitting = false;
     contactSubmit.disabled = false;
-    contactSubmit.innerHTML = 'Send message <span aria-hidden="true">↗</span>';
+    contactSubmit.innerHTML = 'Send message <span class="icon-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span>';
   }
 });
 let contactSubmitting = false;
+
+function initTilt() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.parallax').forEach(card => {
+    const track = card.closest('.hero-visual, .case-visual') || card;
+    const depth = Number(card.dataset.depth) || 8;
+    let raf = 0;
+    track.addEventListener('pointermove', event => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const rect = track.getBoundingClientRect();
+        if (!rect.width) return;
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        card.style.setProperty('--px', `${(x * depth).toFixed(2)}px`);
+        card.style.setProperty('--py', `${(y * depth).toFixed(2)}px`);
+      });
+    }, { passive: true });
+    track.addEventListener('pointerleave', () => {
+      if (raf) { cancelAnimationFrame(raf); raf = 0; }
+      card.style.setProperty('--px', '0px');
+      card.style.setProperty('--py', '0px');
+    }, { passive: true });
+  });
+}
+
+function initScrollGlide() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const heroVisual = document.querySelector('.hero-visual');
+  if (!heroVisual) return;
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const rect = heroVisual.getBoundingClientRect();
+    const viewport = window.innerHeight;
+    if (rect.bottom < 0 || rect.top > viewport) return;
+    const offset = (rect.top + rect.height / 2 - viewport / 2) / viewport;
+    heroVisual.style.setProperty('--glide', `${(-offset * 22).toFixed(1)}px`);
+  };
+  const schedule = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+}
+
+initTilt();
+initScrollGlide();
